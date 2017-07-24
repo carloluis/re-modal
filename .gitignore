@@ -1,0 +1,18 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files
+
+# dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# generated
+dist/
+*.tgz
+
+# misc
+yarn-error.log
+npm-debug.log
+
+# system
+.DS_Store
+Thumbs.db
