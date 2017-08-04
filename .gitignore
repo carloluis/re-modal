@@ -12,6 +12,7 @@ dist/
 # misc
 yarn-error.log
 npm-debug.log
+.eslintcache
 
 # system
 .DS_Store
