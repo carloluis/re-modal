@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
+import Example from './Example';
 
 render(
-	<h1>Re-Modal...</h1>,
+	<Example />,
 	document.querySelector('#app')
 );
