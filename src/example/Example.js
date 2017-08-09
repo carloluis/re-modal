@@ -1,32 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import create from './modal';
+import create from '../modal';
+import ModalContent from './ModalContent';
 import styles from './example.scss';
 
-const ModalContent = ({ accept }) => (
-	<div>
-		<h1>Re-Modal</h1>
-		<button onClick={() => accept('OK clicked')}>OK</button>
-	</div>
-);
-ModalContent.propTypes = {
-	accept: PropTypes.func
-};
+const EXAMPLE_STATE = { message: '...' };
 
 class Example extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.showModal = this.showModal.bind(this);
-		this.state = {
-			message: ''
-		};
+		this.state = EXAMPLE_STATE;
 	}
 
 	showModal() {
 		create(ModalContent)
 			.then(message => this.setState({ message }))
-			.catch(console.error);
+			.catch(() => this.setState(EXAMPLE_STATE));
 	}
 
 	render() {

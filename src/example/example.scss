@@ -2,4 +2,13 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 16px;
+	background: #ccc;
+
+	button {
+		cursor: pointer;
+	}
+
+	span {
+		color: #fff;
+	}
 }
